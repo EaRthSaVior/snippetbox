@@ -228,3 +228,7 @@ func (app *application) isAuthenticated(r *http.Request) bool {
 	}
 	return isAuthenticated
 }
+
+func ping(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("OK"))
+}
