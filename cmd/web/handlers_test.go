@@ -200,6 +200,6 @@ func TestCreateSnippet(t *testing.T) {
 
 		code, _, body := ts.get(t, "/snippet/create")
 		assert.Equal(t, code, http.StatusOK)
-		assert.StringContains(t, body, "<form action='/snippet/create' method='POST'>")
+		assert.StringContains(t, body, `<form action="/snippet/create" method="POST">`)
 	})
 }
